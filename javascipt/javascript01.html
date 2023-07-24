@@ -25,8 +25,8 @@
         <li class="item4"></li>
     </ul>
         <div id="res2"></div>
-        <button type=:"button" onclick="fnc3()" id ="btn1">인라인 이벤트 발생</button>
-        <button type=:"button" id="btn2">DOM 탐색 이벤트발생</button>
+        <button type="button" onclick="fnc3()" id ="btn1">인라인 이벤트 발생</button>
+        <button type="button" id="btn2">DOM 탐색 이벤트발생</button>
     <script>
         //자바 언어처럼 타입지시자를 사용하지 않는다. -> 형변환이 자동으로 일어남
         //변수, 객체, 함수, 메소드, 이벤트, DOM 컨트롤
@@ -39,8 +39,9 @@
         const data3 = "환타";   //const(constant)는 재선언X, 값 변경 X => 상수
         console.log(data1);
 
-        var data1 = "1004";
-        data2 = "5001";
+        var data1 = 1004;    //재선언 및 값 초기화
+        data2 = 5001;        //값 변경
+
 
         //함수 정의 문법
         function fnc1() {       //함수는 호출해야만 한다.
@@ -51,39 +52,37 @@
 
         //간단한 객체 정의 문법
         var obj = {
-            name:"황씨네",              //필드
+            name:"황씨네",           //필드
             age:31,
-            height: 185
-            method1: function(num1){
+            height: 185,
+            method1:function(num1){
                document.getElementById("res2").innerHTML = "<h2>코카콜라가 좋아요.</h2>";
 
             }
         };
 
         document.getElementById("res2").innerText = obj.name + obj.age + obj.height
+        //메소드 호출 방법
         obj.method1();
 
-        function fnc3() {}
+        function fnc3() {
         var result = document.getElementById ("result");        //태그의 아이디에 의한 접근
         var el = document.getElementsByClassName("lst");     // 태그의 클래스에 의한 접근 : 배열 el[0], el[1]
         var a = document.getElementsByTagName("a");          //태그 명에 의한 접근 : 배열 a[0], a[1], a[2]
         var res2 = document.querySelector("#result");       //#을 붙여야 함         //복수형은 document.querySelecotorall
         var item = document.querySelector(".lst li");        ////배열  item[0], item[1]
-    }
+    
         result.innerText = data2;
-        for(var i=0;i<item.lenght;i++){     //item의 요소 수만큼 진행
+        for(var i=0;i<item.lenght;i++){     //item의 요소 수만큼 반복 수행
             item[i].innerHTML = "<strong>"+data3+"</strong>";
         }
-
-        var btn2 = document.getElementById("btn2")
-        btn2.addEventListener("click", function(){
-            fnc3;
-        }
+    }
+        var btn2 = document.getElementById("btn2");
+        btn2.addEventListener("click", function(){fnc3();});
     
         /*
         fnc1():
-        fnc2():
-        fnc1():*/
+        fnc2():*/
 
     </script>
     
