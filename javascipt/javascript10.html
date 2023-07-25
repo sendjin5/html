@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 10 - screen & window</title>
+</head>
+<body>
+    <div id="brt1">출력</div>
+    <div id="brt2">인쇄</div>
+    <div id="brt3" onclick="javascript:window.close();">창닫기</div>
+    <div id="req"></div>
+    <script>
+        var brt1 = document.getElementById("brt1");
+        var brt2 = document.getElementById("brt2");
+        var req = document.getElementById("req");
+
+        var res;
+
+        brt1.addEventListener("click", function(){res();})
+        brt2.addEventListener("click", function(){ window.print();})
+        
+        function res(){
+            var html="";
+            for(var key in screen){
+                html+="<p>"+key+screen[key]+"</p>";
+            }
+            
+            req.innerHTML = html;
+        }
+
+
+
+    </script>
+
+
+
+
+</body>
+</html>
