@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시작페이지</title>
+    <style>
+        element.style{
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+            margin: 0;
+        }
+        
+        #container {
+            display: block;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: auto;
+            /*flex-direction: row;*/
+        }
+        .item {
+            /* width: 500px;
+            height: 100%; */
+            /*flex: 1;*/
+            /*overflow: hidden;*/
+            position: absolute;
+            /*transition: flex 0.5s;*/
+            border: black 1px solid;
+            background-color: burlywood;
+        }
+        #left {
+            position: absolute;
+            height: 100%;
+            width: 50%;
+            float: left;
+            top: 50%;
+            left: 0;
+
+        }
+        #right {
+            position: absolute;
+            height: 100%;
+            width: 50%;
+            float: right;
+            top: 50%;
+            right: 0;
+        }
+        .item-content {
+            position: absolute;
+            /*transform: translate(-50%, -50%);*/
+            top: 50%;
+            left: 50%;
+            text-align: center;
+            color: darkcyan;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+<div id="container" class="container">
+    <div id="left" class="item">
+        <div class="item-content">왼쪽
+             <hr>  <a href="#">링크</a>
+        </div>
+    
+    </div>
+    <div id="right" class="item">
+        <div class="item-content">오른쪽
+        <hr> <a href="#">링크</a>
+
+        </div>
+    </div>
+</div>
+</body>
+<script>
+
+</script>
+</html>
